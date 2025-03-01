@@ -1,0 +1,25 @@
+[project]
+name = "wallapopsales"
+version = "0.1.0"
+description = "This is a scraper tool for wallapop sales"
+authors = [
+    {name = "Eduardo Grove",email = "edo.grove@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "selenium (>=4.29.0,<5.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "bs4 (>=0.0.2,<0.0.3)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
