@@ -8,9 +8,9 @@ import os
 def debug_response(search_term, offset=0, limit=20):
     base_url = "https://api.wallapop.com/api/v3/general/search"
     params = {
-        "keywords": search_term.replace(' ','%20'),
-        "longitude": -3.7020655,
-        "latitude": 40.4166461,
+        "keywords": search_term.replace(' ','%20'), # Weird wallapop encoding
+        "longitude": -5,
+        "latitude": 37,
         "sold": "True",
         "offset": offset,
         "limit": limit
