@@ -11,6 +11,7 @@ def debug_response(search_term, offset=0, limit=20):
         "keywords": search_term.replace(' ','%20'),
         "longitude": -3.7020655,
         "latitude": 40.4166461,
+        "sold": "True",
         "offset": offset,
         "limit": limit
     }
@@ -43,7 +44,7 @@ def extract_products(search_term: str, offset=0, limit = 20, hard_limit = 100):
         # Clear the console and show the current offset
         os.system('cls' if os.name == 'nt' else 'clear')
         print(f"Current offset: {offset} / {hard_limit}")
-        
+
         data = debug_response(search_term, offset, limit)
         if data is None or "search_objects" not in data:
             break
